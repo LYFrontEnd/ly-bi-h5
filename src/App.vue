@@ -1,9 +1,12 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <div id="app">
+    <div class="aaa"></div>
+    <nav>
+      <router-link to="/">Home</router-link> |
+      <router-link to="/about">About</router-link>
+    </nav>
+    <router-view />
+  </div>
 </template>
 
 <style lang="scss">
@@ -26,5 +29,9 @@ nav {
       color: #42b983;
     }
   }
+}
+.aaa {
+  background-color: red;
+  height: 375px;
 }
 </style>
