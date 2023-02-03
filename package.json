@@ -4,7 +4,9 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve --open",
-    "build": "vue-cli-service build"
+    "build": "vue-cli-service build",
+    "publish": "python3 publish.py",
+    "upload": "npm run build && npm run publish"
   },
   "dependencies": {
     "amfe-flexible": "^2.2.1",
