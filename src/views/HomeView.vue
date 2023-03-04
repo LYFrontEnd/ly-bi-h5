@@ -1,21 +1,37 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
-    <Button>1111111</Button>
+    <Button @click="gotoVideoPlay">1111111</Button>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
 import { Button } from "vant";
+import { getHomeRecommendList } from "@/request/api/home";
 
 export default {
   name: "HomeView",
   components: {
-    HelloWorld,
     Button,
+  },
+  mounted: () => {
+    getHomeRecommendList({
+      index: "0",
+    })
+      .then((res) => {
+        console.log("首页接口成功了");
+        console.log(res);
+      })
+      .catch((err) => {
+        console.log("首页接口出错了");
+        console.log(err);
+      });
+  },
+  methods: {
+    gotoVideoPlay: function () {
+      this.$router.push({
+        path: "/playvideo",
+      });
+    },
   },
 };
 </script>
