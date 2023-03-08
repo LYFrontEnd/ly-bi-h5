@@ -1,8 +1,8 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import Home from '../views/home/Home.vue'
 import Layout from '../views/Layout.vue'
-import PlayVideoDetail from '../views/PlayVideoDetail.vue'
+import PlayVideoDetail from '../views/playvideodetail'
 
 Vue.use(VueRouter)
 
@@ -18,18 +18,34 @@ const routes = [
     children: [
         {
             path: 'home',
-            component: HomeView,
+            component: Home,
             meta: { // meta保存路由对象额外信息的
                 title: "首页"
             }
         },
         {
-          path: 'about',
-          name: 'about',
+          path: 'radio',
+          name: 'radio',
           meta: {
-            title: "关于"
+            title: "电台"
           },
-          component: () => import('../views/AboutView.vue')
+          component: () => import('../views/radio/RadioHome.vue')
+        },
+        {
+          path: 'music',
+          name: 'music',
+          meta: {
+            title: "音乐"
+          },
+          component: () => import('../views/music/MusicHome.vue')
+        },
+        {
+          path: 'mine',
+          name: 'mine',
+          meta: {
+            title: "我的"
+          },
+          component: () => import('../views/mine/MineHome.vue')
         }
     ]
   },
