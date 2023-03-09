@@ -5,9 +5,9 @@
         <div class="nav-login-btn" @click="login">登录</div>
       </template>
       <template #right>
-        <van-image width="30px" height="30px" :src="navGameIcon" />
+        <van-image class="nav-game-icon" :src="navGameIcon" />
         <div class="nav-icon-space"></div>
-        <van-image width="28px" height="28px" :src="navMessageIcon" />
+        <van-image class="nav-msg-icon" :src="navMessageIcon" />
       </template>
     </van-nav-bar>
     <van-tabs
@@ -86,5 +86,14 @@ export default {
   color: #ff6b9c;
   font-size: 14px;
   text-align: center;
+}
+
+.nav-game-icon {
+  width: 26px;
+  height: 26px;
+}
+.nav-msg-icon {
+  width: 22px;
+  height: 22px;
 }
 </style>

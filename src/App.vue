@@ -5,7 +5,7 @@
 </template>
 
 <style lang="scss">
-* {
-  touch-action: none;
-}
+// * {
+//   touch-action: auto;
+// }
 </style>
