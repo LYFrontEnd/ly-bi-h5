@@ -2,7 +2,9 @@
   <div>
     <div class="main">
       <!-- 二级路由-挂载点 -->
-      <router-view></router-view>
+      <keep-alive>
+        <router-view></router-view>
+      </keep-alive>
     </div>
     <van-tabbar
       active-color="#CE3F36"
